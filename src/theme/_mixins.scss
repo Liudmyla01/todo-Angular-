@@ -1,0 +1,22 @@
+
+@mixin flex($direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin btn($w,$h,$bg:$secondary-color,$b:none,$b-c:none,$b-r:none){
+  width: $w;
+  height: $h;
+  background-color: $bg;
+  border: $b solid $b-c;
+  border-radius: $b-r;
+}
+@mixin font($f-w,$f-s,$l-h,$c:#333333) {
+  font-weight: $f-w;
+  font-size: $f-s;
+  line-height: $l-h;
+  color: $c;
+   
+}

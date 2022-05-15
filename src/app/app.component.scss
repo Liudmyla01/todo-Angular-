@@ -1,0 +1,19 @@
+@import "../theme/color";
+@import "../theme/mixins";
+@import "../theme/responsive";
+
+
+.wrapper{
+    @include flex(column,center,center);
+    margin: 50px;
+    h1{
+        align-self: self-start;
+    }
+    .todoContainer{
+        width: 400px;
+        height: 600px;
+        border: 1px solid $darckBlue;
+        border-radius: 16px;
+        padding: 16px;
+    }
+}
