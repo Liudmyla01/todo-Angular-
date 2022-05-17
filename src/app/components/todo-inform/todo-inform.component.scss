@@ -1,0 +1,28 @@
+@import "../../../theme/color";
+@import "../../../theme/mixins";
+
+.todoInformWrapper{
+    @include flex(row,center,space-around);
+    height: 30px;
+    width: 100%;
+    margin: 20px 0;
+ 
+    .all_todo, .active_todo, .completed_todo{
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        border-radius: 8px;
+        padding-top: 4px;
+    }
+      .all_todo{
+        background-color: $pink;
+    }
+    .active_todo{
+        background-color: $green;
+        border: 1px solid #949191;
+        
+    }
+    .completed_todo{
+        background: $pink;
+    }
+}

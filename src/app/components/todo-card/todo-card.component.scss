@@ -1,0 +1,21 @@
+@import "../../../theme/color";
+@import "../../../theme/mixins";
+
+.wrapper{
+    overflow: scroll;
+    height: 455px;
+    .itemInformation{
+        @include flex(row,center,space-between);
+        background-color: $white;
+        padding: 8px;
+        margin-bottom: 8px;
+        border-radius: 17px;
+        &:hover{
+            box-shadow: 0px 0px 11px $blue;
+            background-color: $green;
+        }
+        .remove{
+            cursor: pointer;
+        }
+    }
+}

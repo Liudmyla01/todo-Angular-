@@ -42,8 +42,9 @@ $todo-theme: mat.define-light-theme((
     font-size: 100%;
   }
   body{
+    background-image: linear-gradient(#BAD4E3,#F9D9E1);
     // background-color: rgb(249,217,225);
-    background-color: linear-gradient(104deg, rgba(249,217,225,1) 16%, rgba(186,212,227,1) 91%)
+    // background-color: linear-gradient(104deg, rgba(249,217,225,1) 16%, rgba(186,212,227,1) 91%)
   }
   a {
     text-decoration: none;

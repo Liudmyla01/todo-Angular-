@@ -1,19 +1,30 @@
 @import "../theme/color";
 @import "../theme/mixins";
-@import "../theme/responsive";
-
 
 .wrapper{
     @include flex(column,center,center);
-    margin: 50px;
-    h1{
-        align-self: self-start;
-    }
+    height: 100vh;
+    // h1{
+       
+    // }
     .todoContainer{
         width: 400px;
         height: 600px;
-        border: 1px solid $darckBlue;
+        border: 1px solid $darck;
         border-radius: 16px;
         padding: 16px;
+        &__addItem{
+            width: 100%;
+            input{
+                width: 75%;
+                height: 35px;
+                background: $white;
+                margin-right: 16px;
+                padding: 8px;
+                border-radius: 5px;
+            }
+        }
+        
     }
+ 
 }

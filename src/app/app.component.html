@@ -1,9 +1,22 @@
 <section class="wrapper">
   <h1>To Do List</h1>
 <div class="todoContainer">
-<div class="todoContainer__addItem">
-  <input type="text">
-  <button mat-raised-button>Add</button>
-</div>
+<form class="todoContainer__addItem" [formGroup]="form" (ngSubmit)="addTodo()">
+  <input type="text" placeholder="add new..." formControlName="title" id="title">
+  <button *ngIf="form.valid;else dis" mat-raised-button type="submit">Add</button>
+  <ng-template #dis><button  mat-stroked-button disabled>Add</button></ng-template>
+  
+</form>
+<app-todo-inform  [all]="allItemsCount" [active]="activeCount" [completed]="countCompleted"></app-todo-inform>
+
+      <div class="todoContainer__listItem" *ngIf="todosList; else loading">
+        <app-todo-card [items]="todos$" (idTodo)="removeTodo($event)"></app-todo-card>
+      </div>
+
 </div>
 </section>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
+

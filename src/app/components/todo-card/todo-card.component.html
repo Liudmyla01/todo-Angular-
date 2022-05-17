@@ -1,0 +1,6 @@
+  <div class="wrapper">
+    <div class="itemInformation" *ngFor="let item of todos">
+      <span #itemId>{{item.title}}</span>
+      <span class="material-icons md-48 remove" (click)="submitId(item)">clear</span>
+  </div>
+  </div>
